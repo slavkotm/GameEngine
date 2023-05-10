@@ -10,7 +10,7 @@ CXX_FLAGS = -Wall -std=c++17
 
 # libraries
 LIBS = -lSDL2 -lvulkan 
-LIBS_TUTORIAL = -lglfw -lvulkan
+LIBS_TUTORIAL = -lvulkan -lSDL2 -ltinyobjloader -lglfw 
 
 # variables
 FINAL           = GameEngine
