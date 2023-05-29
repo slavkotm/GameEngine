@@ -3,8 +3,23 @@
 
 #include "GameEnginePublic.h"
 
-GameEngine_t *gameEngineCreate();
+enum GraphicsAPI 
+{
+	VULKAN = 1, //default
+	OPENGL = 2,
+	CUSTOM = 3,
+	CONSOLE = 4
+};
 
-void gameEngineDelete(GameEngine_t *engine);
+int gameEngine_sizeof();
+
+GameEngine_t *gameEngine_create();
+
+void gameEngine_init(void *memory,
+					 void *pGameEngineCore,
+					 int  graphicsAPI,
+					 int  versionEngine);
+
+void gameEngine_delete(GameEngine_t *engine);
 
 #endif /* _GAME_ENGINE_H_ */
